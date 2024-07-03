@@ -1,7 +1,7 @@
 import { useAccount, useConnect, useDisconnect } from 'wagmi';
-import ConnectPage from './ConnectPage';
-import MainPage from './MainPage';
-import StatusBar from './StatusBar';
+import ConnectPage from './pages/ConnectPage';
+import MainPage from './pages/MainPage';
+import StatusBar from './components/StatusBar';
 
 function App() {
   const account = useAccount()
@@ -13,7 +13,7 @@ function App() {
       {account.status === 'connected' ?
         <MainPage disconnect={disconnect} account={account} />
         :
-        <ConnectPage account={account} connectors={connectors} connect={connect} status={status} error={error} />
+        <ConnectPage account={account} connectors={connectors} connect={connect} />
       }
       <StatusBar account={account} status={status} error={error}/>
     </>
