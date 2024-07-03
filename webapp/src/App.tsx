@@ -8,11 +8,7 @@ function App() {
 
   return (
     <>
-      {account.status === 'connected' ? (
-        <MainPage />
-      ) : (
-        <ConnectPage />
-      )}
+      {account.status === 'connected' ? (<MainPage />) : (<ConnectPage />)}
       <StatusBar />
     </>
   );
