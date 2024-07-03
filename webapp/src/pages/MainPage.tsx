@@ -48,7 +48,7 @@ function MainPage() {
                             {account.addresses.map((address: string, index: number) => (
                                 <div className='bg-zinc-200 p-2 space-y-2'>
                                     <div className='flex justify-between items-center text-zinc-800'>
-                                        <h2 className='font-mono' key={index}>{`${address.slice(0, 7)}`.toLowerCase()}<span className='text-zinc-400'>{`${address.slice(7)}`.toLowerCase()}</span></h2>
+                                        <h2 className='font-mono' key={index}>{`${address.slice(0, 15)}`.toLowerCase()}...</h2>
                                         <div className='bg-zinc-300 rounded font-mono aspect-square flex items-center justify-center w-6 h-6'>{getAddressDepositCount(address).data?.toString()}</div>
                                     </div>
                                     <div className='grid grid-cols-2 gap-2'>
