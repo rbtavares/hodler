@@ -1,11 +1,9 @@
+import { useAccount, useDisconnect } from 'wagmi';
 import Tooltip from "../components/ToolTip";
 
-interface MainPageProps {
-    disconnect: any,
-    account: any
-}
-
-function MainPage({ disconnect, account }: MainPageProps) {
+function MainPage() {
+    const account = useAccount();
+    const { disconnect } = useDisconnect();
 
     return (
         <div className="min-h-screen flex flex-col p-5 pb-10">
@@ -15,9 +13,9 @@ function MainPage({ disconnect, account }: MainPageProps) {
                     <div className='space-x-3 flex items-center'>
                         <Tooltip content={
                             <div className="flex flex-col font-mono text-xs">
-                            {account.addresses.map((address: string, index: number) => (
-                                <span key={index}>{`${address.slice(0, 5)}...${address.slice(-4)}`.toLowerCase()}</span>
-                            ))}
+                                {account.addresses.map((address: string, index: number) => (
+                                    <span key={index}>{`${address.slice(0, 5)}...${address.slice(-4)}`.toLowerCase()}</span>
+                                ))}
                             </div>
                         }>
                             <span className='text-zinc-600 text-sm'>{account.addresses.length} address{account.addresses.length !== 1 && 'es'} connected</span>

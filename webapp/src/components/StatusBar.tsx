@@ -1,14 +1,12 @@
-interface StatusBarProps {
-    account: any,
-    status: any,
-    error: any
-}
+import { useAccount, useConnect } from 'wagmi';
 
 function capitalize(word: string) {
     return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 }
 
-function StatusBar({ status, account, error }: StatusBarProps) {
+function StatusBar() {
+    const account = useAccount();
+    const { status, error } = useConnect();
 
     return (
         <div className="fixed bottom-0 left-0 w-full flex justify-between text-sm bg-zinc-700 text-white">

@@ -1,12 +1,9 @@
-import { Connector } from 'wagmi';
+import { useAccount, useConnect } from 'wagmi';
 
-interface ConnectPageProps {
-    account: any,
-    connectors: readonly Connector[],
-    connect: any //TODO type
-}
+function ConnectPage() {
+    const account = useAccount();
+    const { connectors, connect } = useConnect();
 
-function ConnectPage({ account, connectors, connect }: ConnectPageProps) {
     return (
         <div className='bg-gradient-to-br from-white to-slate-100 min-h-screen w-full flex flex-col items-center justify-center gap-5'>
             <h2 className='tracking-wide text-[10rem] font-bold bg-gradient-to-br from-orange-500 via-amber-500 to-yellow-300 bg-clip-text text-transparent drop-shadow'>HODLER</h2>
