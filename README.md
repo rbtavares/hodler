@@ -28,4 +28,4 @@ If you are using Foundry:
 
 Frontend deployment:
 
-1. Deploy the React app by changing into the webapp directory with `cd webapp` and running `npm run start`. Then, open the URL for the deployed web application on your browser.
+1. Deploy the React app by changing into the webapp directory with `cd webapp` and running `npm i`. Then, run `npm run start` and open the URL for the deployed web application on your browser.
