@@ -1,5 +1,7 @@
 # HODLER
 
+⚠️ HODLER is currently under development and will always be a project made for practicing, use contracts at your own risk. ⚠️
+
 ## What is HODLER
 
 HODLER is a full-stack decentralized application for holding funds on the EVM, allowing you store funds for a set period of time without the possibility of withdrawing them before the specified time goal is met.
