@@ -29,10 +29,7 @@ export default function ChainSelector({ className }: { className?: string }) {
 
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState(chain ? String(chain.id) : '')
-
-  console.log(value)
-
-
+  
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>

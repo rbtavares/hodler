@@ -14,7 +14,6 @@ function MainPage() {
   const { chain } = useAccount();
 
   useEffect(() => {
-    console.log(chains)
     if (chain === undefined)
       switchChain({ chainId: sepolia.id });
   }, [])

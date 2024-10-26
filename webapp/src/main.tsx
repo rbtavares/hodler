@@ -12,7 +12,7 @@ import MainPage from './pages/MainPage.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/hodler",
+    path: "/hodler", // path required for github pages
     element: <MainPage />,
   },
 ]);

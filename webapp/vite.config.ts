@@ -4,7 +4,7 @@ import { defineConfig } from "vite"
 
 export default defineConfig({
   plugins: [react()],
-  base: '/hodler',
+  base: '/hodler', // path required for github pages
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
