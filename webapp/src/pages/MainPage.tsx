@@ -10,7 +10,7 @@ import { sepolia } from 'wagmi/chains';
 
 function MainPage() {
 
-  const { chains, switchChain } = useSwitchChain();
+  const { switchChain } = useSwitchChain();
   const { chain } = useAccount();
 
   useEffect(() => {
