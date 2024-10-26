@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
 
 const tokens = [
 
@@ -40,9 +39,6 @@ const tokens = [
 
 const NewHodlCard = () => {
 
-    const [amount, setAmount] = useState(0);
-    const [token, setToken] = useState(null);
-
     return (
         <div className="flex w-full">
             <Card className="w-full relative overflow-hidden p-3 flex flex-col gap-3">
@@ -67,7 +63,7 @@ const NewHodlCard = () => {
                             <span className="aspect-square h-full flex items-center justify-center border-l">2</span>
                         </div>
                         <div className="flex flex-col h-full justify-center gap-1">
-                            <Input className="text-center pr-0 font-mono" placeholder="0" type="number" onChange={e => setAmount(Number(e.target.value))} />
+                            <Input className="text-center pr-0 font-mono" placeholder="0" type="number" onChange={() => {}} />
                             <p className="text-xs text-gray-400 text-end">&asymp; $0.0 USD</p>
                         </div>
                     </div>
