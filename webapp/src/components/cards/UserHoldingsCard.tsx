@@ -1,21 +1,20 @@
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
     TableHead,
     TableHeader,
-    TableRow,
-} from "@/components/ui/table"
-import { Button } from "@/components/ui/button";
+    TableRow
+} from "@/components/ui/table";
 
 
 const UserHodlings = () => {
     return (
         <div className="flex w-full h-full">
             <Card className="w-full relative overflow-hidden p-3">
-                <h1 className="text-3xl font-medium text-center mb-2">Your Holdings</h1>
+                <h1 className="text-3xl font-medium text-center my-2">Your Holdings</h1>
 
                 <Table>
                     <TableHeader>

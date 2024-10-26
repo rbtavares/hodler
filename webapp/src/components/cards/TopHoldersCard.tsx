@@ -4,7 +4,7 @@ const TopHoldersCard = () => {
     return (
         <div className="flex w-full col-span-2">
             <Card className="w-full relative overflow-hidden p-3">
-                <h1 className="text-3xl font-medium text-center mb-2">Top Holders</h1>
+                <h1 className="text-3xl font-medium text-center my-2">Top Holders</h1>
             </Card>
         </div>
     )

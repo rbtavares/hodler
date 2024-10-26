@@ -14,7 +14,7 @@ const LatestHoldsCard = () => {
     return (
         <div className="flex w-full h-full col-span-2">
             <Card className="w-full relative overflow-hidden p-3">
-                <h1 className="text-3xl font-medium text-center mb-2">Latest Holdings</h1>
+                <h1 className="text-3xl font-medium text-center my-2">Latest Holdings</h1>
 
                 <Table>
                     <TableCaption>No active holdings.</TableCaption>

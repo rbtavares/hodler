@@ -46,7 +46,7 @@ const NewHodlCard = () => {
     return (
         <div className="flex w-full">
             <Card className="w-full relative overflow-hidden p-3 flex flex-col gap-3">
-                <h1 className="text-3xl font-medium text-center mb-2">New Holding</h1>
+                <h1 className="text-3xl font-medium text-center my-2">New Holding</h1>
 
                 <div className="grid grid-cols-3 flex-grow gap-10 border-b border-zinc-100 pb-5">
                     <div className="w-full flex flex-col gap-5">
