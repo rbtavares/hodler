@@ -1,17 +1,15 @@
+import MetamaskIcon from '@/assets/metamask.svg';
+import { Button } from "@/components/ui/button";
 import {
     Dialog,
     DialogContent,
     DialogDescription,
+    DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogClose,
-    DialogTrigger,
-    DialogFooter,
-} from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button";
-import { useConnectors } from "wagmi";
-import { useConnect } from 'wagmi'
-import MetamaskIcon from '@/assets/metamask.svg';
+    DialogTrigger
+} from "@/components/ui/dialog";
+import { useConnect, useConnectors } from "wagmi";
 
 const ConnectDialog = () => {
     const connectors = useConnectors();

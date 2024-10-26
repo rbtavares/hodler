@@ -35,7 +35,7 @@ const SettingsDialog = () => {
                     <h1 className="w-full flex justify-between items-center text-lg font-medium">Chain</h1>
                     <ul className="">
                         <li><b>Name:</b> {account.chain ? account.chain.name : 'N/A'}</li>
-                        <li><b>ID:</b> {account.chain ? <span className="font-mono">{account.chain.id}</span> : 'N/A'}</li>
+                        <li><b>ID:</b> {account.chain ? <span className="font-mono">{account.chain.id}</span> : account.chainId ? <span className="font-mono">{account.chainId}</span>: 'N/A'}</li>
                         <li><b>Currency:</b> {account.chain ? <>{account.chain.nativeCurrency.name} <span className="font-mono bg-gray-200 px-1 py-0.5 rounded-md">${account.chain.nativeCurrency.symbol}</span></> : 'N/A' }</li>
                     </ul>
                 </div>

@@ -13,6 +13,7 @@ function MainPage() {
   const { chain } = useAccount();
 
   useEffect(() => {
+    if (chain === undefined)
       switchChain({ chainId: chains[0].id });
   }, [])
 
@@ -44,8 +45,6 @@ function MainPage() {
                 <div className="text-start text-xs font-mono text-gray-400 items-center justify-center flex flex-col gap-2">
                   <p>
                     HODLER &mdash; Version 1.0
-                    <br /><br />
-                    github.com/rbtavares/hodler
                     <br /><br />
                     This project is currently under development and will always be a project made for practicing, select and use contracts/chains at your own risk.
                   </p>
