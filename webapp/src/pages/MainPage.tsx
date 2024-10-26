@@ -18,20 +18,30 @@ function MainPage() {
 
           <div className="grid grid-cols-3 gap-5 h-full">
 
-            <ChainConnectionCard connected={false} />
-            <NewHodlCard />
-            <LatestHoldsCard />
-            <UserHodlings />
-            <TopHoldersCard />
+            <div className="flex flex-col h-full gap-5">
+              <ChainConnectionCard connected={true} />
+              <UserHodlings />
+            </div>
 
-            <div className="text-start text-xs font-mono text-gray-400 items-center justify-center flex flex-col gap-2">
-              <p>
-                HODLER &mdash; Version 1.0
-                <br /><br />
-                github.com/rbtavares/hodler
-                <br /><br />
-                This project is currently under development and will always be a project made for practicing, select and use contracts/chains at your own risk.
-              </p>
+            <div className="flex flex-col h-full gap-5 col-span-2">
+              <NewHodlCard />
+              <LatestHoldsCard />
+
+              <div className="grid grid-cols-3 gap-5">
+
+                <TopHoldersCard />
+
+                <div className="text-start text-xs font-mono text-gray-400 items-center justify-center flex flex-col gap-2">
+                  <p>
+                    HODLER &mdash; Version 1.0
+                    <br /><br />
+                    github.com/rbtavares/hodler
+                    <br /><br />
+                    This project is currently under development and will always be a project made for practicing, select and use contracts/chains at your own risk.
+                  </p>
+                </div>
+
+              </div>
             </div>
 
           </div>

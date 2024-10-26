@@ -4,7 +4,7 @@ import './ChainConnectionCard.css';
 
 const ChainConnectionCard = ({ connected }: { connected: boolean }) => {
     return (
-        <div className="flex w-full h-full row-span-2">
+        <div className="flex w-full row-span-2 h-48">
             <Card className="w-full relative overflow-hidden">
                 <div className={`box-inner absolute bottom-0 w-full flex flex-col gap-4 items-start p-3 pt-4 ${connected ? 'green-wave' : 'red-wave'}`}>
 

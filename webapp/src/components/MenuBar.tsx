@@ -12,7 +12,7 @@ function MenuBar() {
     return (
         <Menubar>
             <MenubarMenu>
-                <MenubarTrigger>Settings</MenubarTrigger>
+                <MenubarTrigger>About</MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem>
                         New Tab <MenubarShortcut>⌘T</MenubarShortcut>
@@ -25,7 +25,7 @@ function MenuBar() {
                 </MenubarContent>
             </MenubarMenu>
             <MenubarMenu>
-                <MenubarTrigger>Account</MenubarTrigger>
+                <MenubarTrigger>Settings</MenubarTrigger>
                 <MenubarContent>
                     <MenubarItem>
                         New Tab <MenubarShortcut>⌘T</MenubarShortcut>
