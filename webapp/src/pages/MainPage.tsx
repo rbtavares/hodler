@@ -1,11 +1,12 @@
 import ChainConnectionCard from "@/components/cards/ChainConnectionCard";
 import LatestHoldsCard from "@/components/cards/LatestHoldingsCard";
-import MenuBar from "@/components/OptionsBar";
 import NewHodlCard from "@/components/cards/NewHoldingCard";
-import UserHodlings from "@/components/cards/UserHoldingsCard";
 import TopHoldersCard from "@/components/cards/TopHoldersCard";
-import { useAccount, useSwitchChain } from "wagmi";
+import UserHodlings from "@/components/cards/UserHoldingsCard";
+import MenuBar from "@/components/OptionsBar";
 import { useEffect } from "react";
+import { useAccount, useSwitchChain } from "wagmi";
+import { sepolia } from 'wagmi/chains';
 
 function MainPage() {
 
@@ -13,8 +14,9 @@ function MainPage() {
   const { chain } = useAccount();
 
   useEffect(() => {
+    console.log(chains)
     if (chain === undefined)
-      switchChain({ chainId: chains[0].id });
+      switchChain({ chainId: sepolia.id });
   }, [])
 
   return (
