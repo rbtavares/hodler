@@ -12,7 +12,7 @@ import MainPage from './pages/MainPage.tsx'
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/hodler",
     element: <MainPage />,
   },
 ]);
