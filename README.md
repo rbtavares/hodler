@@ -1,5 +1,7 @@
 # HODLER
 
+⚠️ HODLER is currently under development and will always be a project made for practicing, use contracts at your own risk. ⚠️
+
 ## What is HODLER
 
 HODLER is a full-stack decentralized application for holding funds on the EVM, allowing you store funds for a set period of time without the possibility of withdrawing them before the specified time goal is met.
@@ -28,4 +30,4 @@ If you are using Foundry:
 
 Frontend deployment:
 
-1. Deploy the React app by changing into the webapp directory with `cd webapp` and running `npm run start`. Then, open the URL for the deployed web application on your browser.
+1. Deploy the React app by changing into the webapp directory with `cd webapp` and running `npm i`. Then, run `npm run start` and open the URL for the deployed web application on your browser.
