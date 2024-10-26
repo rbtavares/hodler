@@ -1,10 +1,10 @@
+import TokenSelector from "@/components/selectors/TokenSelector";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { ArrowRight } from "lucide-react";
-import TokenSelector from "../TokenSelector";
-import { Button } from "../ui/button";
 import { useState } from "react";
-import { Label } from "../ui/label";
 
 const tokens = [
 
@@ -50,9 +50,9 @@ const NewHodlCard = () => {
 
                 <div className="grid grid-cols-3 flex-grow gap-10 border-b border-zinc-100 pb-5">
                     <div className="w-full flex flex-col gap-5">
-                        <div className="flex flex-row gap-2 w-full items-center border-b border-black rounded-tl rounded-bl">
-                            <span className="bg-black text-white aspect-square size-7 flex items-center justify-center text-md rounded-tl rounded-bl font-medium">1</span>
-                            <h2 className="text-xl w-full">Token</h2>
+                        <div className="flex flex-row gap-2 w-full items-center bg-black text-white rounded pl-2">
+                            <h2 className="text-lg w-full">Token</h2>
+                            <span className="aspect-square h-full flex items-center justify-center border-l">1</span>
                         </div>
                         <div className="flex flex-col gap-2 h-full justify-center">
                             <TokenSelector options={tokens} />
@@ -61,9 +61,10 @@ const NewHodlCard = () => {
                         </div>
                     </div>
                     <div className="w-full flex flex-col gap-5">
-                        <div className="flex flex-row gap-2 w-full items-center border-b border-black rounded-tl rounded-bl">
-                            <span className="bg-black text-white aspect-square size-7 flex items-center justify-center text-md rounded-tl rounded-bl font-medium">2</span>
-                            <h2 className="text-xl w-full">Amount</h2>
+
+                        <div className="flex flex-row gap-2 w-full items-center bg-black text-white rounded pl-2">
+                            <h2 className="text-lg w-full">Amount</h2>
+                            <span className="aspect-square h-full flex items-center justify-center border-l">2</span>
                         </div>
                         <div className="flex flex-col h-full justify-center gap-1">
                             <Input className="text-center pr-0 font-mono" placeholder="0" type="number" onChange={e => setAmount(Number(e.target.value))} />
@@ -71,9 +72,10 @@ const NewHodlCard = () => {
                         </div>
                     </div>
                     <div className="w-full flex flex-col gap-5">
-                        <div className="flex flex-row gap-2 w-full items-center border-b border-black rounded-tl rounded-bl">
-                            <span className="bg-black text-white aspect-square size-7 flex items-center justify-center text-md rounded-tl rounded-bl font-medium">3</span>
-                            <h2 className="text-xl w-full">Timing</h2>
+
+                        <div className="flex flex-row gap-2 w-full items-center bg-black text-white rounded pl-2">
+                            <h2 className="text-lg w-full">Timing</h2>
+                            <span className="aspect-square h-full flex items-center justify-center border-l">3</span>
                         </div>
 
                         <div className="flex flex-col gap-1 h-full justify-center">

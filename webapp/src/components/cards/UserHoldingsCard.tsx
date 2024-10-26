@@ -8,7 +8,7 @@ import {
     TableHeader,
     TableRow,
 } from "@/components/ui/table"
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 
 const UserHodlings = () => {
@@ -25,16 +25,6 @@ const UserHodlings = () => {
                         </TableRow>
                     </TableHeader>
                     <TableBody>
-                        <TableRow>
-                            <TableCell>USDC</TableCell>
-                            <TableCell>0.003</TableCell>
-                            <TableCell className="text-right"><Button variant="ghost">Widthdraw</Button></TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell>USDC</TableCell>
-                            <TableCell>0.003</TableCell>
-                            <TableCell className="text-right"><Button variant="ghost">Widthdraw</Button></TableCell>
-                        </TableRow>
                         <TableRow>
                             <TableCell>USDC</TableCell>
                             <TableCell>0.003</TableCell>

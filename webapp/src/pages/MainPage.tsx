@@ -1,11 +1,21 @@
 import ChainConnectionCard from "@/components/cards/ChainConnectionCard";
 import LatestHoldsCard from "@/components/cards/LatestHoldingsCard";
-import MenuBar from "@/components/MenuBar";
+import MenuBar from "@/components/OptionsBar";
 import NewHodlCard from "@/components/cards/NewHoldingCard";
 import UserHodlings from "@/components/cards/UserHoldingsCard";
 import TopHoldersCard from "@/components/cards/TopHoldersCard";
+import { useAccount, useSwitchChain } from "wagmi";
+import { useEffect } from "react";
 
 function MainPage() {
+
+  const { chains, switchChain } = useSwitchChain();
+  const { chain } = useAccount();
+
+  useEffect(() => {
+      switchChain({ chainId: chains[0].id });
+  }, [])
+
   return (
     <>
       <div className="w-full h-screen flex justify-center bg-zinc-100">
@@ -19,7 +29,7 @@ function MainPage() {
           <div className="grid grid-cols-3 gap-5 h-full">
 
             <div className="flex flex-col h-full gap-5">
-              <ChainConnectionCard connected={true} />
+              <ChainConnectionCard />
               <UserHodlings />
             </div>
 
