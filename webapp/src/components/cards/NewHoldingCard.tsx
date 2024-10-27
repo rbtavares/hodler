@@ -3,10 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { ArrowRight } from "lucide-react";
-import { useState, useEffect } from "react";
+import { ArrowRight, Check } from "lucide-react";
+import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
-import { Check, X } from "lucide-react";
 
 const tokens = [
 
