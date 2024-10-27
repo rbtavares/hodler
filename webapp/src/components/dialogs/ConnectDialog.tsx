@@ -7,18 +7,21 @@ import {
     DialogFooter,
     DialogHeader,
     DialogTitle,
-    DialogTrigger
+    DialogTrigger,
+    DialogClose
 } from "@/components/ui/dialog";
-import { useConnect, useConnectors } from "wagmi";
+import { useAccount, useConnect, useConnectors } from "wagmi";
+import { Loader2 } from 'lucide-react';
 
 const ConnectDialog = () => {
+    const account = useAccount();
     const connectors = useConnectors();
     const { connect } = useConnect();
 
     return (
         <Dialog>
             <DialogTrigger asChild>
-                <Button className="h-8">Connect</Button>
+                <Button disabled={account.isConnecting || account.isReconnecting} className="h-8"> {(account.isConnecting || account.isConnected) && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}Connect{(account.isConnecting || account.isConnected) && <>ing...</>}</Button>
             </DialogTrigger>
             <DialogContent>
                 <DialogHeader>
@@ -31,12 +34,14 @@ const ConnectDialog = () => {
                     {connectors && connectors.length > 0 && <>
                         {connectors.map((con) => {
                             return (
-                                <Button
-                                    key={con.id}
-                                    onClick={() => connect({ connector: con })}
-                                >
-                                    <img src={MetamaskIcon} className="size-6" />{con.name}
-                                </Button>
+                                <DialogClose asChild>
+                                    <Button
+                                        key={con.id}
+                                        onClick={() => connect({ connector: con })}
+                                    >
+                                        <img src={MetamaskIcon} className="size-6" />{con.name}
+                                    </Button>
+                                </DialogClose>
                             )
                         })}
                     </>}

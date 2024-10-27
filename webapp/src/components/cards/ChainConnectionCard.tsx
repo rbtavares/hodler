@@ -2,6 +2,8 @@ import { Card } from "@/components/ui/card";
 import { useAccount } from "wagmi";
 import ConnectDialog from "@/components/dialogs/ConnectDialog";
 import './ChainConnectionCard.css';
+import { shortAddress } from "@/lib/utils";
+import { CONTRACT_ADDRESS } from "@/config";
 
 const ChainConnectionCard = () => {
 
@@ -42,7 +44,7 @@ const ChainConnectionCard = () => {
 
                     {account.isConnected ?
                         account.chain !== undefined ?
-                            <p className="w-full font-mono text-sm text-zinc-400 text-start pl-2">Using contract: 0xFFFF...FFFF</p>
+                            <p className="w-full font-mono text-sm text-zinc-400 text-start pl-2">Using contract: {shortAddress(CONTRACT_ADDRESS)}</p>
                             :
                             <p className="w-full text-sm text-zinc-400 text-start pl-2">Switch to a compatible chain in your wallet or use the settings.</p>
                         :

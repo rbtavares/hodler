@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/popover"
 
 
-const TokenSelector = ({ options }: { options: {value: string, label: string}[] }) => {
+const TokenSelector = ({ options, onChange }: { options: { value: string, label: string }[], onChange: Function }) => {
   const [open, setOpen] = React.useState(false)
   const [value, setValue] = React.useState("")
 
@@ -50,6 +50,7 @@ const TokenSelector = ({ options }: { options: {value: string, label: string}[] 
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue)
                     setOpen(false)
+                    onChange(currentValue === value ? "" : currentValue)
                   }}
                 >
                   <Check
