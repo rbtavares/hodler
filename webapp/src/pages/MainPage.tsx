@@ -1,8 +1,8 @@
-import ChainConnectionCard from "@/components/cards/ChainConnectionCard";
+import ConnectionCard from "@/components/cards/ConnectionCard";
 import LatestHoldsCard from "@/components/cards/LatestHoldingsCard";
-import NewHodlCard from "@/components/cards/NewHoldingCard";
+import NewDepositCard from "@/components/cards/NewDepositCard";
 import TopHoldersCard from "@/components/cards/TopHoldersCard";
-import UserHodlings from "@/components/cards/UserHoldingsCard";
+import UserDepositsCard from "@/components/cards/UserDepositsCard";
 import MenuBar from "@/components/OptionsBar";
 import { useEffect } from "react";
 import { useAccount, useSwitchChain } from "wagmi";
@@ -31,12 +31,12 @@ function MainPage() {
           <div className="grid grid-cols-3 gap-5 h-full">
 
             <div className="flex flex-col h-full gap-5">
-              <ChainConnectionCard />
-              <UserHodlings />
+              <ConnectionCard />
+              <UserDepositsCard />
             </div>
 
             <div className="flex flex-col h-full gap-5 col-span-2">
-              <NewHodlCard />
+              <NewDepositCard />
               <LatestHoldsCard />
 
               <div className="grid grid-cols-3 gap-5">

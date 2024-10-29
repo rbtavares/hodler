@@ -16,7 +16,7 @@ import { useAccount, useReadContract } from "wagmi";
 
 const REFETCH_COOLDOWN = 10;
 
-const UserHoldings = () => {
+const UserDepositsCard = () => {
     const account = useAccount();
     const [refetchCountdown, setRefetchCountdown] = useState(0);
     const userDeposits = useReadContract({
@@ -77,4 +77,4 @@ const UserHoldings = () => {
     );
 };
 
-export default UserHoldings;
+export default UserDepositsCard;

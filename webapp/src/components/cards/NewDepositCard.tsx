@@ -64,7 +64,7 @@ const NewHodlCard = () => {
 
     const { writeContract } = useWriteContract();
 
-    // New Holding Data
+    // New Deposit Data
     const account = useAccount();
     const [asset, setAsset] = useState('');
     // const [customAssetAddress, setCustomAssetAddress] = useState('');
@@ -118,10 +118,10 @@ const NewHodlCard = () => {
                 {
                     (!account.isConnected || account.chain === undefined) &&
                     <div className="absolute inset-0 top-0 left-0 w-full h-full bg-black bg-opacity-30 z-50 p-3 flex items-center justify-center backdrop-blur">
-                        <h1 className="text-white drop-shadow-lg text-sm">{(account.isConnected && account.chain === undefined) ? <>Switch to a compatible chain in the settings.</> : <>Connect your wallet to begin holding.</>}</h1>
+                        <h1 className="text-white drop-shadow-lg text-sm">{(account.isConnected && account.chain === undefined) ? <>Switch to a compatible chain in the settings.</> : <>Connect your wallet to begin Deposit.</>}</h1>
                     </div>
                 }
-                <h1 className="text-3xl font-medium text-center my-2">New Holding</h1>
+                <h1 className="text-3xl font-medium text-center my-2">New Deposit</h1>
                 <div className="grid grid-cols-3 flex-grow gap-10 border-b border-zinc-100 pb-5">
                     <div className="w-full flex flex-col gap-5">
                         <div className="flex flex-row gap-2 w-full items-center pl-2 border-b">

@@ -1,11 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { useAccount } from "wagmi";
 import ConnectDialog from "@/components/dialogs/ConnectDialog";
-import './ChainConnectionCard.css';
+import './ConnectionCard.css';
 import { shortAddress } from "@/lib/utils";
 import { CONTRACT_ADDRESS } from "@/config";
 
-const ChainConnectionCard = () => {
+const ConnectionCard = () => {
 
     const account = useAccount();
 
@@ -56,4 +56,4 @@ const ChainConnectionCard = () => {
     )
 }
 
-export default ChainConnectionCard;
+export default ConnectionCard;
