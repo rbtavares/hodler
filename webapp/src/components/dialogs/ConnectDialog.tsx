@@ -34,9 +34,8 @@ const ConnectDialog = () => {
                     {connectors && connectors.length > 0 && <>
                         {connectors.map((con) => {
                             return (
-                                <DialogClose asChild>
+                                <DialogClose key={con.id} asChild>
                                     <Button
-                                        key={con.id}
                                         onClick={() => connect({ connector: con })}
                                     >
                                         <img src={MetamaskIcon} className="size-6" />{con.name}

@@ -5,7 +5,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { ArrowRight, Check } from "lucide-react";
 import { useEffect, useState } from "react";
-import { useAccount } from "wagmi";
+import { useAccount, useWriteContract } from "wagmi";
+import { parseEther } from 'viem'
+import { CONTRACT_ADDRESS } from "@/config";
+import { abi } from '@/lib/abi';
 
 const tokens = [
 
@@ -58,6 +61,8 @@ const formatFutureDate = (date: Date): string => {
 }
 
 const NewHodlCard = () => {
+
+    const { writeContract } = useWriteContract();
 
     // New Holding Data
     const account = useAccount();
@@ -174,7 +179,18 @@ const NewHodlCard = () => {
                         {asset !== '' && <span className="text-gray-400"> {asset}</span>}
                         {(duration.days != 0 || duration.hours != 0 || duration.minutes != 0) && <> for <span className="text-gray-400">{duration.days > 0 && duration.days + 'd'} {duration.hours > 0 && duration.hours + 'h'} {duration.minutes > 0 && duration.minutes + 'm'}</span></>}
                     </p>
-                    <Button disabled={amount === 0 || asset === '' || (duration.days == 0 && duration.hours == 0 && duration.minutes == 0)}>Confirm <ArrowRight /></Button>
+                    <Button disabled={amount === 0 || asset === '' || (duration.days == 0 && duration.hours == 0 && duration.minutes == 0)}
+                        onClick={() =>
+                            writeContract({
+                                abi,
+                                address: CONTRACT_ADDRESS,
+                                functionName: 'deposit',
+                                args: [
+                                    duration.days * 86400 + duration.hours * 3600 + duration.minutes * 60,
+                                ],
+                                value: parseEther(String(amount))
+                            })
+                        }>Confirm <ArrowRight /></Button>
                 </div>
                 {/* <Input type="number" placeholder="Amount" />
                 
