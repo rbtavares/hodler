@@ -59,4 +59,9 @@ contract Hodler {
     function getDepositCount(address _user) external view returns (uint256) {
         return deposits[_user].length;
     }
+
+    // Function to get all deposits from a user
+    function getDeposits(address _user) external view returns (Deposit[] memory) {
+        return deposits[_user];
+    }
 }
