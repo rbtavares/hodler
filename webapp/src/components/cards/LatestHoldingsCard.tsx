@@ -45,18 +45,6 @@ const LatestHoldsCard = () => {
                             <TableCell className="font-mono">0.003</TableCell>
                             <TableCell className="text-right">Dec 9, 2024 @ 19:54</TableCell>
                         </TableRow>
-                        <TableRow>
-                            <TableCell className="font-mono">0xf39Fd6e51aad88F6F4ce6a...</TableCell>
-                            <TableCell>USDC</TableCell>
-                            <TableCell className="font-mono">0.003</TableCell>
-                            <TableCell className="text-right">Dec 9, 2024 @ 19:54</TableCell>
-                        </TableRow>
-                        <TableRow>
-                            <TableCell className="font-mono">0xf39Fd6e51aad88F6F4ce6a...</TableCell>
-                            <TableCell>USDC</TableCell>
-                            <TableCell className="font-mono">0.003</TableCell>
-                            <TableCell className="text-right">Dec 9, 2024 @ 19:54</TableCell>
-                        </TableRow>
                     </TableBody>
                 </Table>
 
