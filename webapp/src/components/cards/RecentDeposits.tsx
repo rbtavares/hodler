@@ -55,7 +55,7 @@ const RecentDepositsCard = () => {
 
         {/* Scrollable content area */}
         <div className="flex flex-col gap-3 flex-grow overflow-y-auto">
-          {recentDeposits.map((item, index) => <RecentDeposit key={index} author={"A"} eventTime={1} amount={2} asset="A" depositTime={89} />)}
+          {recentDeposits.map((item, index) => <RecentDeposit key={index} author={item.data} eventTime={1} amount={2} asset="A" depositTime={89} />)}
         </div>
       </Card>
     </div>
